@@ -1,0 +1,144 @@
+//register de cada rol              Post
+http://localhost:8080/user/admin  
+http://localhost:8080/user/seller  
+http://localhost:8080/user/customer   
+{
+  "username": "example_username",
+  "email": "example@example.com",
+  "password": "example_password"
+}
+
+//login                            Post
+http://localhost:8080/auth/login  
+{
+  "username": "example_username",
+  "password": "example_password"
+}
+
+//llamar todos los usuarios         Get
+http://localhost:8080/auth
+
+//llamar uno en especial con id     Get
+http://localhost:8080/auth/1
+
+//Actualizar el usuario             Put
+http://localhost:8080/auth/1
+{
+  "username": "updated_username",
+  "email": "updated@example.com"
+}
+
+//Eliminar el usuario               Delete
+http://localhost:8080/auth/1
+
+//Crear categorias                   Post
+http://localhost:8080/categories
+{
+  "name": "Category Name",
+  "description": "Category Description"
+}
+
+//Llamar categorias                  Get
+http://localhost:8080/categories
+
+//llamar una en especial con id       Get
+http://localhost:8080/categories/1
+
+//Actualizar el categoria             Put
+http://localhost:8080/categories/1       
+{
+  "name": "Update",
+  "description": "Category Update"
+}
+
+//Eliminar la categoria              Delete
+http://localhost:8080/auth/1
+
+//Crear productos                     Post
+http://localhost:8080/products
+{
+  "name": "Product Name2",
+  "description": "Product Description2",
+  "price": 10.99,
+  "stockQuantity": 100,
+  "categoryId": 1
+}
+
+//Llamar productos                  Get
+http://localhost:8080/products
+
+//llamar una en especial con id       Get
+http://localhost:8080/products/1
+
+//Actualizar el  productos            Put
+http://localhost:8080/products/1      
+{
+  "name": "Product Editado",
+  "description": "Product Description Editad",
+  "price": 10.99,
+  "stockQuantity": 100,
+  "categoryId": 2
+}
+
+//Eliminar  productos             Delete
+http://localhost:8080/products/1
+
+
+//Crear orders                     Post
+http://localhost:8080/orders
+{
+  "userId": 1,
+  "orderDate": "2024-06-09",
+  "totalAmount": 100.5,
+  "orderDetails": [
+    {
+      "productId": 1,
+      "quantity": 2,
+      "price": 10.99
+    },
+    {
+      "productId": 2,
+      "quantity": 1,
+      "price": 20.5
+    }
+  ]
+}
+
+
+//Llamar productos                  Get
+http://localhost:8080/orders
+
+//llamar una en especial con id       Get
+http://localhost:8080/orders/1
+
+//Actualizar el  productos  puede añadir y borrar productos tambien          Put
+http://localhost:8080/orders/1     
+{
+  "userId": 1,
+  "orderDate": "2025-06-09",
+  "totalAmount": 10,
+  "orderDetails": [
+    {
+      "productId": 3,
+      "quantity": 2,
+      "price": 20
+    },
+    {
+      "productId": 4,
+      "quantity": 2,
+      "price": 40
+    }
+  ]
+}
+
+//Eliminar  ordenes               Delete
+http://localhost:8080/orders/1
+
+
+
+
+
+
+
+
+
